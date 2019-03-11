@@ -19,9 +19,9 @@ params = {'NFFT':256, 'Fs':200, 'noverlap':192}
 s = ReadAIFF('train6.aiff')
 P, freqs, bins = mlab.specgram(s, **params)
 
-print(P.shape)
-print(freqs.shape)
-print(bins.shape)
+# print(P.shape)
+# print(freqs.shape)
+# print(bins.shape)
 # Spectrogram plotting function long_sample_01.aiff
 def plot_spectrogram(ax, P):
     plt.imshow(P, origin='lower', extent=[-6,6,-1,1], aspect=4, cmap = cm.get_cmap('bwr'))
@@ -41,7 +41,7 @@ plt.show()
 
 f1, f2 = 25, 5
 
-# Reassign time bins returned by specgram (convenience so variables match winning submission)
+# Reassign time bins returned by spectogram 
 b = bins
 # Limit statistics to about 470 Hz.
 maxM = 60 
