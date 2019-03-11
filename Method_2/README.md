@@ -1,5 +1,7 @@
 In this method, we first visualize the data and apply some preprocessing steps.
-We include a csv file which has fname and label as the columns.
+eda.py shows the code for plotting.
+
+We include a csv file which has fname(filename) and label(Positive or Negative) as the columns.
 
 ### Time Signal
 
