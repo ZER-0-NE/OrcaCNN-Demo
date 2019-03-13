@@ -9,6 +9,3 @@ For this, we find from the spectrogram the frequency range where the whale call 
 
 ![](assets/Fig3.png)
 
-
-
-
