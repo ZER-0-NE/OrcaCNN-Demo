@@ -18,6 +18,9 @@ def ReadAIFF(file):
     strSig = s.readframes(nFrames)
     return np.fromstring(strSig, np.short).byteswap()
 
+
+list_tmpl = pd.read_csv('templateReduced.csv').reset_index()
+
 # Define vertical sliding window for pre-processing images
 def slidingWindowV(P,inner=3,outer=64,maxM = 50,norm=True):
     Q = P.copy()
@@ -58,11 +61,11 @@ def plot_spectrogram(ax, P, y_label = None):
 
 # Extract templates
 for row in range(len(list_tmpl)):
-    file_num, x0, xn, y0, yn, wclass = list_tmpl.ix[row,:]
+    file_num, x0, xn, y0, yn, wclass = list_tmpl.iloc[row,:]
     wclass = 'Whale' if wclass=='H0' else 'Non-whale'
     # Read one file
     params = {'NFFT':256, 'Fs':2000, 'noverlap':192} 
-    s = ReadAIFF(path_data + 'train/train%d.aiff' % file_num)
+    s = ReadAIFF('data/temp/train%d.aiff' % file_num)
     P, freqs, bins = mlab.specgram(s, **params)
     m, n = P.shape
     
@@ -78,7 +81,8 @@ for row in range(len(list_tmpl)):
     # Set border around image
     R[x0:xn,y0], R[x0:xn,yn] = -set_val, -set_val
     R[x0,y0:yn], R[xn,y0:yn] = -set_val, -set_val
-    
+    print()
+
     # Plot
     fig = plt.figure(figsize = (14,4))
     ax1 = plt.subplot(131)
@@ -93,3 +97,4 @@ for row in range(len(list_tmpl)):
     plt.suptitle('Template - %s' % wclass, fontsize = 16)
     plt.subplots_adjust(top=1.05)
     plt.show()
+
