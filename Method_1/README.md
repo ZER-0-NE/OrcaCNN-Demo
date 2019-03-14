@@ -8,7 +8,7 @@ For this, we use two methods and evaluate their trade-offs:
 ### Template matching and extraction:
 The inspiration of Template matching comes from [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_template_matching/py_template_matching.html). We can very well use this method for extracting features and to find the location of whale up-call.
 
-Template Matching is a method for searching and finding the location of a template image in a larger image. We use the template image as a [whale-call](https://github.com/ZER-0-NE/OrcaCNN-Demo/blob/master/Method_1/assets/whale_template.png).
+Template Matching is a method for searching and finding the location of a template image in a larger image. We use this template image as a [whale-call](https://github.com/ZER-0-NE/OrcaCNN-Demo/blob/master/Method_1/assets/whale_template.png).
 
 We take these below images to find the location of the whale call:
 
@@ -31,7 +31,7 @@ We take these below images to find the location of the whale call:
 </p>
 
 
-After the use of [temp_match.py](https://github.com/ZER-0-NE/OrcaCNN-Demo/blob/master/Method_1/temp_match.py.py) script, we see the following results:
+After the use of [temp_match.py](https://github.com/ZER-0-NE/OrcaCNN-Demo/blob/master/Method_1/temp_match.py) script, we see the following results:
 
 
 <p align="center">
@@ -48,6 +48,38 @@ After the use of [temp_match.py](https://github.com/ZER-0-NE/OrcaCNN-Demo/blob/m
   <img  src=assets/Figure_2.png/>
  Non-Whale Call (Start coordinate= 753 End coordinate= 978)
 </p>
+
+**These start and end-coordinates can be then used to match with the spectrogram to find the exact start and end-time of orca calls**
+
+After the Template Extraction method, we see the following results:
+[This](https://github.com/ZER-0-NE/OrcaCNN-Demo/blob/master/Method_1/temp_extract.py) script extracts and plots all the templates, showing 3 images per row:
+
+1. The original image (from where the template is extracted)
+2. The image after being pre-processed
+3. The template extracted, where the background is blue for whale sounds and 
+red for non-whale sounds
+
+<p align="center">
+  <img  src=assets/whale_ext1.png/>
+</p>
+
+
+<p align="center">
+  <img  src=assets/nonwhale_ext.png/>
+</p>
+
+
+<p align="center">
+  <img  src=assets/whale_ext2.png/>
+</p>
+
+
+<p align="center">
+  <img  src=assets/nonwhale_ext2.png/>
+</p>
+
+
+### Frequency Metrics using bins:
 
 
 
