@@ -65,7 +65,7 @@ red for non-whale sounds
 
 
 <p align="center">
-  <img  src=assets/nonwhale_ext.png/>
+  <img  src=assets/nonwhale_ext1.png/>
 </p>
 
 
