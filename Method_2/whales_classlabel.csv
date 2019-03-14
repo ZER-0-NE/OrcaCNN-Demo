@@ -1,0 +1,26 @@
+fname,label
+neg_00.wav,Negative
+neg_01.wav,Negative
+neg_02.wav,Negative
+neg_03.wav,Negative
+neg_04.wav,Negative
+neg_05.wav,Negative
+pos_00.wav,weeya
+pos_01.wav,double weeya
+pos_02.wav,weeya
+pos_03.wav,weeya
+pos_04.wav,weeya
+pos_05.wav,a
+pos_06.wav,updownup
+pos_07.wav,richochet
+pos_08.wav,richochet
+pos_09.wav,richochet
+pos_10.wav,a
+pos_11.wav,c
+pos_12.wav,b
+pos_13.wav,weeya
+pos_14.wav,updownup
+pos_15.wav,updownup
+pos_16.wav,updownup
+pos_17.wav,swoop
+pos_18.wav,updownup
