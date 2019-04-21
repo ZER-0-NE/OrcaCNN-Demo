@@ -5,3 +5,7 @@ Passive acoustic observation of whales is an increasingly important tool for wha
 This project aims to develop two deep learning models for the detection and pod-classification of orca, or killer whale, calls in unknown long audio samples. These deep neural networks will help identify and verify killer whale calls so that researchers, grad students, and shipping vessels don't have to. The end-user interface can be made as a web-app which can easily be used by scientists in their research.
 
 
+<p align = "center">
+Pipeline
+<img src = /pipeline.jpg>
+</p>
